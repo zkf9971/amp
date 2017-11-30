@@ -64,9 +64,3 @@ If the secret is not present before the invocation of `amp cluster create`, it w
 - `SUPassword`: A super user password of 32 characters will be generated and displayed during the execution of the command.
 
 If the secret is already created, it will be used as is without any modifications.
-
-#### Creating a cluster on AWS
-
-To target AWS, you should use the --provider aws option, refer to the help for details on aws options: `amp cluster create -h`.
-
-More details on the AWS creation on the [AMP wiki](https://github.com/appcelerator/amp/wiki/AMP-Clusters-deployment-on-AWS)
