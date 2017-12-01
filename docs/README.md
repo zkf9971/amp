@@ -2,10 +2,10 @@
 
 * [Installation](#installation)
   * [Prerequisites](#prerequisites)
-    * [MacOS](#macos)
+    * [Mac OS](#mac-os)
     * [Windows](#windows)
     * [Linux](#linux)
-  * [Downloading the CLI](#downloading-the-cli)
+  * [Downloading the AMP CLI](#downloading-the-amp-cli)
   * [Certificates](#certificates)
   * [Using the development version](#using-the-development-version)
 * [Usage](#usage)
