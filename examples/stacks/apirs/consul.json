@@ -40,6 +40,281 @@
 		"value": "appcelerator"
 	},
 	{
+		"key": "arrowcloud/apns_unsubscription_enabled",
+		"flags": 0,
+		"value": "true"
+	},
+	{
+		"key": "arrowcloud/app_base_image_name",
+		"flags": 0,
+		"value": "app_base"
+	},
+	{
+		"key": "arrowcloud/app_start_period",
+		"flags": 0,
+		"value": "2"
+	},
+	{
+		"key": "arrowcloud/arrowcloud_admin_url_prefix",
+		"flags": 0,
+		"value": "admin"
+	},
+	{
+		"key": "arrowcloud/arrowcloud_alert_internal_recipients/0",
+		"flags": 0,
+		"value": "kzhang@axway.com"
+	},
+	{
+		"key": "arrowcloud/arrowcloud_app_data_location",
+		"flags": 0,
+		"value": "/appc/arrowcloud/app_data"
+	},
+	{
+		"key": "arrowcloud/arrowcloud_apps_haproxy_stats_urls/0",
+		"flags": 0,
+		"value": "localhost:8081"
+	},
+	{
+		"key": "arrowcloud/arrowcloud_domain",
+		"flags": 0,
+		"value": "apirs.arrow.appcelerator.io"
+	},
+	{
+		"key": "arrowcloud/arrowcloud_freePlanPoints",
+		"flags": 0,
+		"value": "-1"
+	},
+	{
+		"key": "arrowcloud/arrowcloud_infrastructure",
+		"flags": 0,
+		"value": "aws"
+	},
+	{
+		"key": "arrowcloud/arrowcloud_mail_notification_enabled",
+		"flags": 0,
+		"value": "true"
+	},
+	{
+		"key": "arrowcloud/arrowcloud_membership_secret_key",
+		"flags": 0,
+		"value": "??????????"
+	},
+	{
+		"key": "arrowcloud/arrowcloud_storage_type",
+		"flags": 0,
+		"value": "/appc"
+	},
+	{
+		"key": "arrowcloud/aws_base_container_group",
+		"flags": 0,
+		"value": "Test-AutoScalingGroupBaseContainer-14Q73IVB66Y9I"
+	},
+	{
+		"key": "arrowcloud/aws_base_container_num_limit",
+		"flags": 0,
+		"value": "10"
+	},
+	{
+		"key": "arrowcloud/aws_ec2_region",
+		"flags": 0,
+		"value": "us-west-2"
+	},
+	{
+		"key": "arrowcloud/aws_iam_instance_profile_name",
+		"flags": 0,
+		"value": "instance_profile_placeholder"
+	},
+	{
+		"key": "arrowcloud/aws_s3_bucket_arrowcloud",
+		"flags": 0,
+		"value": "bucket_placeholder"
+	},
+	{
+		"key": "arrowcloud/aws_s3_region",
+		"flags": 0,
+		"value": "us-west-1"
+	},
+	{
+		"key": "arrowcloud/base_container_max_booting_time",
+		"flags": 0,
+		"value": "600000"
+	},
+	{
+		"key": "arrowcloud/base_container_max_pending_time",
+		"flags": 0,
+		"value": "60000"
+	},
+	{
+		"key": "arrowcloud/base_container_max_provisioning_time",
+		"flags": 0,
+		"value": "600000"
+	},
+	{
+		"key": "arrowcloud/base_container_minimum_age",
+		"flags": 0,
+		"value": "1800000"
+	},
+	{
+		"key": "arrowcloud/base_container_minimum_num",
+		"flags": 0,
+		"value": "3"
+	},
+	{
+		"key": "arrowcloud/base_container_reserved_free_memory",
+		"flags": 0,
+		"value": "7680"
+	},
+	{
+		"key": "arrowcloud/base_container_scaling_down",
+		"flags": 0,
+		"value": "true"
+	},
+	{
+		"key": "arrowcloud/base_container_scaling_down_after_dn",
+		"flags": 0,
+		"value": "1800000"
+	},
+	{
+		"key": "arrowcloud/base_container_scaling_down_after_up",
+		"flags": 0,
+		"value": "1800000"
+	},
+	{
+		"key": "arrowcloud/base_container_scaling_enabled",
+		"flags": 0,
+		"value": "false"
+	},
+	{
+		"key": "arrowcloud/base_container_scaling_up",
+		"flags": 0,
+		"value": "true"
+	},
+	{
+		"key": "arrowcloud/base_container_termination_after_drain",
+		"flags": 0,
+		"value": "1800000"
+	},
+	{
+		"key": "arrowcloud/buildScriptDir",
+		"flags": 0,
+		"value": "/opt/arrowcloud/npminstall"
+	},
+	{
+		"key": "arrowcloud/check_acs_consistency_enabled",
+		"flags": 0,
+		"value": "true"
+	},
+	{
+		"key": "arrowcloud/cluster_monitering_enabled",
+		"flags": 0,
+		"value": "false"
+	},
+	{
+		"key": "arrowcloud/consul_admin_password",
+		"flags": 0,
+		"value": "gv94U5J509mc"
+	},
+	{
+		"key": "arrowcloud/deactivation_enabled",
+		"flags": 0,
+		"value": "true"
+	},
+	{
+		"key": "arrowcloud/default_node_version",
+		"flags": 0,
+		"value": "6.10.2"
+	},
+	{
+		"key": "arrowcloud/docker_registry_internal_domain",
+		"flags": 0,
+		"value": "registry.service.docker.swarm"
+	},
+	{
+		"key": "arrowcloud/docker_registry_internal_port",
+		"flags": 0,
+		"value": "5000"
+	},
+	{
+		"key": "arrowcloud/docker_registry_user_name",
+		"flags": 0,
+		"value": "admin"
+	},
+	{
+		"key": "arrowcloud/email_domain",
+		"flags": 0,
+		"value": "appcelerator.com"
+	},
+	{
+		"key": "arrowcloud/email_host",
+		"flags": 0,
+		"value": "email-smtp.us-west-2.amazonaws.com"
+	},
+	{
+		"key": "arrowcloud/email_password",
+		"flags": 0,
+		"value": "xxxxxxxxxxx"
+	},
+	{
+		"key": "arrowcloud/email_port",
+		"flags": 0,
+		"value": "587"
+	},
+	{
+		"key": "arrowcloud/email_secure",
+		"flags": 0,
+		"value": "true"
+	},
+	{
+		"key": "arrowcloud/email_sender_email",
+		"flags": 0,
+		"value": "noreply@appcelerator.com"
+	},
+	{
+		"key": "arrowcloud/email_username",
+		"flags": 0,
+		"value": "xxxxxxxx"
+	},
+	{
+		"key": "arrowcloud/haproxy_ssl",
+		"flags": 0,
+		"value": "bind *:443 ssl crt /etc/haproxy/certs crt /data/certs reqadd X-Forwarded-Proto:\\ https if { ssl_fc }"
+	},
+	{
+		"key": "arrowcloud/node_dist_url",
+		"flags": 0,
+		"value": "https://nodejs.org/dist"
+	},
+	{
+		"key": "arrowcloud/node_version_manager",
+		"flags": 0,
+		"value": "n"
+	},
+	{
+		"key": "arrowcloud/npm_registry_url",
+		"flags": 0,
+		"value": "https://registry.npmjs.org/"
+	},
+	{
+		"key": "arrowcloud/num_stratus_workers",
+		"flags": 0,
+		"value": "5"
+	},
+	{
+		"key": "arrowcloud/pem_inserter_enabled",
+		"flags": 0,
+		"value": "false"
+	},
+	{
+		"key": "arrowcloud/pem_inserter_storage_enabled",
+		"flags": 0,
+		"value": "false"
+	},
+	{
+		"key": "arrowcloud/protocol",
+		"flags": 0,
+		"value": "https"
+	},
+	{
 		"key": "arrowdb/",
 		"flags": 0,
 		"value": ""

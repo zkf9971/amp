@@ -162,6 +162,50 @@ services:
       - start-with-consul.sh
       - /harbor/harbor_ui
 
+  haproxy-cfg-monitor:
+    image: services-registry.cloudapp-enterprise-preprod.appctest.com:5000/arrowcloud/haproxy-cfg-monitor:1.6.0-sp2
+    networks:
+      - backend
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.labels.amp.type.user == true
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/etc/haproxy:/etc/haproxy"
+      - "/etc/haproxy/haproxy-app-certs:/data/certs"
+      - "/appc/haproxy/haproxy-server-certs:/etc/haproxy/certs"
+    environment:
+      CONSUL: "consul"
+      HAPROXY_CONTAINER_NAME: "haproxy-apps-servers"
+    entrypoint:
+      - start-haproxy-cfg-monitor.sh 
+      - node 
+      - --nouse_idle_notification 
+      - --expose_gc 
+      - /usr/src/app/lib/haproxy-cfg-monitor 
+      - --config /usr/src/app/config.json
+
+  haproxy-apps-servers:
+    image: services-registry.cloudapp-enterprise-preprod.appctest.com:5000/arrowcloud/haproxy:1.6.0-sp2
+    ports:
+      - 80:80
+      - 443:443
+      - 8081:8081
+    networks:
+      - backend
+      - public
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.amp.type.user == true
+    volumes:
+      - "/appc/haproxy/haproxy-server-certs:/etc/haproxy/certs"
+      - "/etc/haproxy:/usr/local/etc/haproxy"
+      - "/etc/haproxy/haproxy-app-certs:/data/certs"
+
 volumes:
   arrowdb_photos:
     driver: local
