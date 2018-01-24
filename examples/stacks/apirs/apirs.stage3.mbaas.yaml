@@ -1,0 +1,74 @@
+version: "3.3"
+
+networks:
+  public:
+    external: true
+  backend:
+    driver: overlay
+
+services:
+
+  acs:
+    image: services-registry.cloudapp-enterprise-preprod.appctest.com:5000/arrowcloud/arrowdb:1.6.0-sp2
+    networks:
+      - backend
+      - public
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.amp.type.user == true
+    volumes:
+      - type: volume
+        source: arrowdb_photos
+        target: /opt/appcelerator/acs-api/public/photos
+      - type: volume
+        source: arrowdb_files
+        target: /opt/appcelerator/acs-api/public/file
+      - type: volume
+        source: arrowdb_exports
+        target: /opt/appcelerator/acs-api/public/exports
+    environment:
+      CONSUL: consul
+      SERVICE_PORTS: 8082
+      VIRTUAL_HOST: "https://acs.apirs.*,acs.apirs.*"
+    entrypoint:
+      - /usr/local/bin/start-arrowdb.sh
+      - api
+      - production
+      
+  push-dispatcher:
+    image: services-registry.cloudapp-enterprise-preprod.appctest.com:5000/arrowcloud/arrowdb:1.6.0-sp2
+    networks:
+      - backend
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.amp.type.user == true
+    environment:
+      CONSUL: consul
+    entrypoint:
+      - /usr/local/bin/start-arrowdb.sh
+      - push-dispatcher
+      - production
+
+volumes:
+  arrowdb_photos:
+    driver: local
+    driver_opts:
+      type: nfs
+      device: :/appc/arrowdb/photos
+      o: addr=${NFS_SERVER:-fs-dae96c73.efs.us-west-2.amazonaws.com},nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2
+  arrowdb_files:
+    driver: local
+    driver_opts:
+      type: nfs
+      device: :/appc/arrowdb/files
+      o: addr=${NFS_SERVER:-fs-dae96c73.efs.us-west-2.amazonaws.com},nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2
+  arrowdb_exports:
+    driver: local
+    driver_opts:
+      type: nfs
+      device: :/appc/arrowdb/exports
+      o: addr=${NFS_SERVER:-fs-dae96c73.efs.us-west-2.amazonaws.com},nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2
