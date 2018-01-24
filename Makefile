@@ -77,13 +77,9 @@ clean: clean-protoc cleanall-cli clean-server clean-beat clean-agent clean-monit
 clean-vendor:
 	@rm -rf vendor
 
-Gopkg.lock: Gopkg.toml
-	@dep ensure -update
-	@dep prune
-
 # not named `vendor` to avoid inopportune triggering
-install-vendor: Gopkg.lock
-	@dep ensure
+install-vendor:
+	@dep ensure -vendor-only
 	@dep prune
 
 # =============================================================================
