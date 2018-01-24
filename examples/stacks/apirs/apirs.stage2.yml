@@ -28,6 +28,8 @@ services:
       APIRS_MONGO_PRODUCTS: "arrowdb dashboard"
       APIRS_MONGO_ARROWDB_USERNAME: "appcelerator"
       APIRS_MONGO_ARROWDB_PASSWORD: "changeme"
+      APIRS_MONGO_ARROWCLOUD_USERNAME: "appcelerator"
+      APIRS_MONGO_ARROWCLOUD_PASSWORD: "changeme"
       APIRS_MONGO_DASHBOARD_USERNAME: "appcelerator"
       APIRS_MONGO_DASHBOARD_PASSWORD: "changeme"
     command:
